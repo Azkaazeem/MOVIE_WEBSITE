@@ -19,6 +19,7 @@ body {
     padding: 0 50px;
     height: 100%;
     color: white;
+    transition: all .5s ease;
 }
 
 .logo-container {
@@ -75,6 +76,7 @@ body {
     align-items: center;
     justify-content: space-around;
     position: relative;
+    transition: all .5s ease;
 }
 
 .toggle-icon {
@@ -90,6 +92,7 @@ body {
     position: absolute;
     right: 1px;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
 .sidebar {
@@ -102,18 +105,22 @@ body {
     flex-direction: column;
     padding-top: 60px;
     align-items: center;
+    transition: all .5s ease;
 }
 
 .left-menu-icon {
     color: white;
     font-size: 20px;
     margin-bottom: 40px;
+    transition: all .5s ease;
+
 }
 
 .container {
     background-color: #151515;
     min-height: calc(100vh - 50px);
     color: white;
+    transition: all .5s ease;
 }
 
 .content-container {
@@ -152,12 +159,15 @@ body {
 
 .movie-list-wrapper {
     position: relative;
+    overflow: hidden;
 }
 
 .movie-list {
     display: flex;
     height: 300px;
     align-items: center;
+    transform: translateX(0);
+    transition: all 0.4s ease-in-out;
 }
 
 .movie-list-item {
@@ -183,6 +193,7 @@ body {
     width: 270px;
     height: 200px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .movie-list-item-title {
@@ -234,4 +245,44 @@ body {
     color: lightgray;
     opacity: 0.5;
     cursor: pointer;
+}
+
+/* AFTER WHITE MOOD */
+
+.container.active {
+    --featured-bottom-color: white;
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+.movie-list-title.active {
+    transition: all 0.5s ease;
+    color: black;
+}
+
+.navbar-container.active {
+    transition: all 0.5s ease;
+    background-color: white;
+    color: black;
+}
+
+.sidebar.active {
+    transition: all 0.5s ease;
+    background-color: white;
+}
+
+.left-menu-icon.active {
+    transition: all 0.5s ease;
+    color: black;
+}
+
+.toggle.active {
+    transition: all 0.5s ease;
+    background-color: black;
+}
+
+.toggle-ball.active {
+    background-color: white;
+    transition: all 0.5s ease;
+    transform: translateX(-20px);
 }
