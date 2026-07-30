@@ -2,6 +2,22 @@
     margin: 0;
 }
 
+html {
+    scrollbar-color: black red;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: red;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
