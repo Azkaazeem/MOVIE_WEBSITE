@@ -289,8 +289,95 @@ body {
     transform: translateX(-20px);
 }
 
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin: 0 20px;
+}
+
+.navbar-container.active .hamburger {
+    color: black;
+}
+
 @media only screen and (max-width: 940px) {
-    .menu-container {
-        display: none;
+    .hamburger {
+        display: block;
+        order: 3;
+        margin: 0;
+        margin-left: 20px;
     }
+
+    .logo-container {
+        order: 1;
+    }
+
+    .profile-container {
+        order: 2;
+    }
+    
+    .menu-container {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .navbar-container.active .menu-container {
+        background-color: white;
+    }
+    
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .menu-list-item {
+        margin: 15px 0;
+    }
+    
+    .menu-toggle-checkbox:checked ~ .menu-container {
+        height: 260px;
+    }
+
+    .featured-desc {
+        width: 100%;
+    }
+    
+    .movie-list-item-img {
+        width: 220px;
+        height: 160px;
+    }
+
+    .movie-list-item-desc {
+        width: 180px;
+        left: 20px;
+    }
+
+    .movie-list-item-title {
+        font-size: 24px;
+        left: 20px;
+    }
+
+    .movie-list-item-button {
+        left: 20px;
+    }
+}
+
+body {
+    overflow-x: hidden;
 }
