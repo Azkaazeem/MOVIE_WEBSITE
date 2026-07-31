@@ -580,6 +580,119 @@ html {
 }
 
 @media only screen and (max-width: 700px) {
+    body {
+        padding-bottom: 56px;
+    }
+
+    .navbar {
+        height: 58px;
+    }
+
+    .navbar-container {
+        justify-content: space-between;
+        padding: 0 14px;
+    }
+
+    .logo-container,
+    .profile-container {
+        flex: initial;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .profile-container {
+        margin-left: auto;
+        gap: 12px;
+    }
+
+    .profile-picture {
+        width: 30px;
+        height: 30px;
+    }
+
+    .profile-text-container {
+        display: none;
+    }
+
+    .toggle {
+        width: 36px;
+        height: 18px;
+    }
+
+    .toggle-ball {
+        width: 16px;
+        height: 16px;
+    }
+
+    .toggle-ball.active {
+        transform: translateX(-18px);
+    }
+
+    .hamburger {
+        margin-left: 2px;
+        font-size: 22px;
+    }
+
+    .menu-container {
+        top: 58px;
+        z-index: 20;
+        box-shadow: 0 14px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    .sidebar {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        z-index: 1001;
+        width: 100%;
+        height: 56px;
+        padding-top: 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .left-menu-icon {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .content-container {
+        margin-left: 0;
+    }
+
+    .featured-content {
+        height: 48vh;
+        min-height: 340px;
+        padding: 82px 24px 30px;
+        background-position: center !important;
+        background-size: cover !important;
+    }
+
+    .featured-title {
+        width: min(180px, 55vw);
+    }
+
+    .featured-desc {
+        display: -webkit-box;
+        margin: 20px 0;
+        overflow: hidden;
+        font-size: 14px;
+        line-height: 1.5;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+
+    .movie-list-container {
+        padding: 0 14px;
+    }
+
+    .movie-list-title {
+        font-size: 25px;
+    }
+
     .site-footer {
         padding: 55px 25px 25px;
     }
