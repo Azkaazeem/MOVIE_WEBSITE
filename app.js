@@ -1,30 +1,25 @@
 // console.log("Hello");
-
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
-// console.log(arrows);
-// console.log(movieLists);
 
-arrows.forEach((arrow,i) => {
-    // console.log(arrow);
-    // console.log(i);
+arrows.forEach((arrow, i) => {
 
-        let clickCounter = 0;
+    const itemNumber = movieLists[i].querySelectorAll("img").length;
+    let clickCounter = 0;
 
-    arrow.addEventListener("click" , () => {
-        // console.log("You clicked to: " + i);
-        // console.log(movieLists[i]);
-        const itemNumber = movieLists[i].querySelectorAll("img").length;
+    arrow.addEventListener("click", () => {
+        const ratio = Math.floor(window.innerWidth / 270);
         clickCounter++;
-        if(itemNumber - (5 + clickCounter) >= 0) {
-        movieLists[i].style.transform = `translateX(${movieLists[i].computedStyleMap().get("transform")[0].x.value -300}px)`;
+        if (itemNumber - (4 + clickCounter) + (4 - ratio) >= 0) {
+            movieLists[i].style.transform = `translateX(${movieLists[i].computedStyleMap().get("transform")[0].x.value - 300}px)`;
         } else {
             movieLists[i].style.transform = `translateX(0)`;
             clickCounter = 0;
         }
     })
-    console.log(window.innerWidth);
-    
+
+    7 -(4+0) + (4-2) 
+    console.log(Math.floor(window.innerWidth / 270));
 })
 
 // TOGGLE BUTTON
@@ -32,7 +27,7 @@ arrows.forEach((arrow,i) => {
 const ball = document.querySelector(".toggle-ball");
 const items = document.querySelectorAll(".container , .movie-list-title , .navbar-container , .sidebar , .left-menu-icon , .toggle , .toggle-ball , .fa-caret-down");
 
-ball.addEventListener("click" , () => {
+ball.addEventListener("click", () => {
     items.forEach(item => {
         item.classList.toggle("active")
     })
