@@ -34,3 +34,8 @@ ball.addEventListener("click", () => {
     })
     // ball.classList.toggle("active")
 })
+
+document.querySelector(".back-to-top").addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});

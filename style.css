@@ -381,3 +381,222 @@ body {
 body {
     overflow-x: hidden;
 }
+
+/* CUSTOM SCROLLBAR */
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: #4dbf00 #101010;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+::-webkit-scrollbar-track {
+    background: #101010;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #62e000, #329000);
+    border: 3px solid #101010;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #76ff0a, #4dbf00);
+}
+
+/* FOOTER */
+
+.site-footer {
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
+    padding: 70px 6% 25px;
+    color: #c8c8c8;
+    background: linear-gradient(145deg, #090909 0%, #111 55%, #0d1608 100%);
+    border-top: 1px solid rgba(77, 191, 0, 0.35);
+}
+
+.footer-glow {
+    position: absolute;
+    top: -170px;
+    left: 12%;
+    width: 340px;
+    height: 340px;
+    pointer-events: none;
+    background: rgba(77, 191, 0, 0.13);
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    max-width: 1200px;
+    margin: 0 auto 55px;
+}
+
+.footer-brand {
+    max-width: 440px;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #4dbf00;
+    font-family: 'Sen', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.footer-logo span {
+    color: white;
+}
+
+.footer-brand p {
+    max-width: 400px;
+    color: #999;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.footer-socials a {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    color: #ddd;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform .25s ease, color .25s ease, background .25s ease;
+}
+
+.footer-socials a:hover {
+    color: #101010;
+    background: #4dbf00;
+    transform: translateY(-4px);
+}
+
+.footer-links {
+    display: flex;
+    gap: clamp(55px, 8vw, 110px);
+}
+
+.footer-column {
+    display: flex;
+    min-width: 100px;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-column h3 {
+    margin-bottom: 5px;
+    color: white;
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
+}
+
+.footer-column a {
+    color: #929292;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color .25s ease, transform .25s ease;
+}
+
+.footer-column a:hover {
+    color: #4dbf00;
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 24px;
+    color: #747474;
+    font-size: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.back-to-top {
+    color: #aaa;
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+.back-to-top i {
+    margin-left: 7px;
+    color: #4dbf00;
+}
+
+.back-to-top:hover {
+    color: white;
+}
+
+.container.active .site-footer {
+    color: #454545;
+    background: linear-gradient(145deg, #f3f3f3, #fff 55%, #efffe5);
+    border-top-color: rgba(77, 191, 0, 0.45);
+}
+
+.container.active .footer-logo span,
+.container.active .footer-column h3 {
+    color: #151515;
+}
+
+.container.active .footer-brand p,
+.container.active .footer-column a,
+.container.active .back-to-top {
+    color: #666;
+}
+
+.container.active .footer-socials a {
+    color: #333;
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.container.active .footer-bottom {
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 700px) {
+    .site-footer {
+        padding: 55px 25px 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 42px;
+    }
+
+    .footer-links {
+        justify-content: space-between;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+}
